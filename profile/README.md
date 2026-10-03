@@ -8,16 +8,22 @@
 
 **This project is currently under active and heavy development. It is NOT ready for general use and may contain bugs, incomplete features, or breaking changes. Use at your own risk.**
 
-InkSpire is a modern web-based text editor designed for writers who want to leverage the power of AI to enhance their creative process. It provides a clean and organized interface for managing files and directories, along with AI-powered tools to rephrase, translate, and generate text.
+InkSpire is a web-based text editor for writing novels, with a language model available where you are already writing. It organises a novel as stories and chapters, generates continuations on request, and keeps a record of which words came from a model and which are yours.
 
 ---
 
 ## ✨ Features
 
-- **AI-Powered Writing Tools**  
-  Rephrase, translate, or expand text directly in your editor.
+- **Continuations from a language model**  
+  Generate from where the chapter has got to, streamed a chunk at a time, from whichever
+  provider is configured.
+- **You can see what you wrote and what a model did**  
+  Every character carries who wrote it, kept in the chapter file beside the prose, so it is
+  still there after a reload.
 - **File System Navigation**  
-  Hierarchical tree view to organize and manage your files.
+  Two tabs: a novel's stories and chapters, and everything that is not a novel.
+- **Version control, built in**  
+  The stories live in a git working tree, committed from the editor.
 - **Clean and Focused Editor**  
   A distraction-free writing environment with a modern interface.
 - **Authentication**  
@@ -33,13 +39,16 @@ InkSpire is a modern web-based text editor designed for writers who want to leve
 |-----------|------------|
 | Frontend  | Vue.js, Vite, TypeScript |
 | Backend   | FastAPI, Python 3.12+ |
+| Planning tools | rdflib, pySHACL, Typst |
+| Storage | the filesystem, under git |
 
 ---
 
 ## 📂 Projects
 
 - [InkSpire Frontend](https://github.com/InkSpireEditor/inkspire-frontend) — The web-based text editor interface
-- [InkSpire API](https://github.com/InkSpireEditor/inkspire-api) — The backend REST API
+- [InkSpire API](https://github.com/InkSpireEditor/inkspire-api) — The backend REST API, and the
+  `lorebook` and `timeline` commands for planning a novel
 
 ---
 
